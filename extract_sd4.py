@@ -5,7 +5,7 @@ def extract_sd4_files():
     print("\n=== Rise of the Dragon .SD4 Extractor ===")
     print("This tool will find and copy all Sega CD audio files.")
 
-    source_dir = input("\nEnter the path to the mounted Sega CD (e.g., /run/media/...): ").strip()
+    source_dir = input("\nEnter the path to the mounted Sega CD (e.g., D:\\ for Windows, or /run/media/... for Linux): ").strip()
     dest_dir = input("Enter the destination path for the SD4 folder: ").strip()
 
     if not os.path.isdir(source_dir):
