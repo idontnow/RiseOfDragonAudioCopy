@@ -6,7 +6,8 @@ def extract_sd4_files():
     print("This tool will find and copy all Sega CD audio files.")
 
     source_dir = input("\nEnter the path to the mounted Sega CD (e.g., D:\\ for Windows, or /run/media/... for Linux): ").strip()
-    dest_dir = input("Enter the destination path for the SD4 folder: ").strip()
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    dest_dir = os.path.join(script_dir, "SD4")
 
     if not os.path.isdir(source_dir):
         print(f"\n[ERROR] Source directory does not exist: {source_dir}")
@@ -14,7 +15,7 @@ def extract_sd4_files():
 
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
-        print(f"Created destination directory: {dest_dir}")
+        print(f"Destination path automatically set to: {dest_dir}")
 
     copied_count = 0
     skipped_count = 0
