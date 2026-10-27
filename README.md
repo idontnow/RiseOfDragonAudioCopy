@@ -71,7 +71,7 @@ Because ScummVM updates frequently, static diff patches break easily. Use the pr
 2. Copy `apply_patch.py` from this repo into the root of the cloned `scummvm` folder.
 3. Run the patcher:
     ```bash
-    python3 apply_patch.py
+    python apply_patch.py
     ```
 4. Configure and build a lightweight version of ScummVM specifically for the DGDS engine:
     ```bash
